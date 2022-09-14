@@ -63,7 +63,7 @@ x-airflow-common:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
-    - ./dbt:/dbt # add this in
+    - ./dbt:/dbt_snowflake # add this in
     - ./dags:/dags # add this in
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
