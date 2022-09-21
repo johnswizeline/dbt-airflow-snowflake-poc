@@ -1,0 +1,24 @@
+[2022-09-21T21:17:34.222+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: postgres_operator_dag_example.create_airflow_demo_schema manual__2022-09-21T21:17:32.844913+00:00 [queued]>
+[2022-09-21T21:17:34.231+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: postgres_operator_dag_example.create_airflow_demo_schema manual__2022-09-21T21:17:32.844913+00:00 [queued]>
+[2022-09-21T21:17:34.247+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-21T21:17:34.249+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 2
+[2022-09-21T21:17:34.266+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-21T21:17:34.293+0000] {taskinstance.py:1389} INFO - Executing <Task(PostgresOperator): create_airflow_demo_schema> on 2022-09-21 21:17:32.844913+00:00
+[2022-09-21T21:17:34.334+0000] {standard_task_runner.py:52} INFO - Started process 59701 to run task
+[2022-09-21T21:17:34.339+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'postgres_operator_dag_example', 'create_***_demo_schema', 'manual__2022-09-21T21:17:32.844913+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/postgresql_demo.py', '--cfg-path', '/tmp/tmps7_b98dc', '--error-file', '/tmp/tmpohtn2nyh']
+[2022-09-21T21:17:34.365+0000] {standard_task_runner.py:80} INFO - Job 9: Subtask create_***_demo_schema
+[2022-09-21T21:17:34.446+0000] {task_command.py:371} INFO - Running <TaskInstance: postgres_operator_dag_example.create_airflow_demo_schema manual__2022-09-21T21:17:32.844913+00:00 [running]> on host 49fa11dd9034
+[2022-09-21T21:17:34.554+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=postgres_operator_dag_example
+AIRFLOW_CTX_TASK_ID=create_***_demo_schema
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-21T21:17:32.844913+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-21T21:17:32.844913+00:00
+[2022-09-21T21:17:34.572+0000] {base.py:68} INFO - Using connection ID 'qa_ai_external_db' for task execution.
+[2022-09-21T21:17:35.516+0000] {sql.py:315} INFO - Running statement: CREATE SCHEMA IF NOT EXISTS ***_demo AUTHORIZATION jsanchez, parameters: None
+[2022-09-21T21:17:35.830+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=postgres_operator_dag_example, task_id=create_***_demo_schema, execution_date=20220921T211732, start_date=20220921T211734, end_date=20220921T211735
+[2022-09-21T21:17:35.891+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-21T21:17:35.950+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check

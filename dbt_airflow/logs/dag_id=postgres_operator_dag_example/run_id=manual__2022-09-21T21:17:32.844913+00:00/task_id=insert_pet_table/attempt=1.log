@@ -1,0 +1,28 @@
+[2022-09-21T21:17:39.316+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: postgres_operator_dag_example.insert_pet_table manual__2022-09-21T21:17:32.844913+00:00 [queued]>
+[2022-09-21T21:17:39.332+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: postgres_operator_dag_example.insert_pet_table manual__2022-09-21T21:17:32.844913+00:00 [queued]>
+[2022-09-21T21:17:39.334+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-21T21:17:39.335+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 2
+[2022-09-21T21:17:39.336+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-21T21:17:39.356+0000] {taskinstance.py:1389} INFO - Executing <Task(PostgresOperator): insert_pet_table> on 2022-09-21 21:17:32.844913+00:00
+[2022-09-21T21:17:39.364+0000] {standard_task_runner.py:52} INFO - Started process 59715 to run task
+[2022-09-21T21:17:39.379+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'postgres_operator_dag_example', 'insert_pet_table', 'manual__2022-09-21T21:17:32.844913+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/postgresql_demo.py', '--cfg-path', '/tmp/tmpky_qwa31', '--error-file', '/tmp/tmp_amc07r6']
+[2022-09-21T21:17:39.390+0000] {standard_task_runner.py:80} INFO - Job 11: Subtask insert_pet_table
+[2022-09-21T21:17:39.454+0000] {task_command.py:371} INFO - Running <TaskInstance: postgres_operator_dag_example.insert_pet_table manual__2022-09-21T21:17:32.844913+00:00 [running]> on host 49fa11dd9034
+[2022-09-21T21:17:39.507+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=postgres_operator_dag_example
+AIRFLOW_CTX_TASK_ID=insert_pet_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-21T21:17:32.844913+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-21T21:17:32.844913+00:00
+[2022-09-21T21:17:39.517+0000] {base.py:68} INFO - Using connection ID 'qa_ai_external_db' for task execution.
+[2022-09-21T21:17:40.169+0000] {sql.py:315} INFO - Running statement: INSERT INTO ***_demo.pet (name, pet_type, birth_date, OWNER) VALUES ( 'Max', 'Dog', '2018-07-05', 'Jane');
+            INSERT INTO ***_demo.pet (name, pet_type, birth_date, OWNER) VALUES ( 'Susie', 'Cat', '2019-05-01', 'Phil');
+            INSERT INTO ***_demo.pet (name, pet_type, birth_date, OWNER) VALUES ( 'Lester', 'Hamster', '2020-06-23', 'Lily');
+            INSERT INTO ***_demo.pet (name, pet_type, birth_date, OWNER) VALUES ( 'Quincy', 'Parrot', '2013-08-11', 'Anne'), parameters: None
+[2022-09-21T21:17:40.382+0000] {sql.py:324} INFO - Rows affected: 1
+[2022-09-21T21:17:40.508+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=postgres_operator_dag_example, task_id=insert_pet_table, execution_date=20220921T211732, start_date=20220921T211739, end_date=20220921T211740
+[2022-09-21T21:17:40.560+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-21T21:17:40.588+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

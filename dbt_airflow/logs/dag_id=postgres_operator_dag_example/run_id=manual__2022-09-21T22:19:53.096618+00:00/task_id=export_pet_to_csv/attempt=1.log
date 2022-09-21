@@ -1,0 +1,33 @@
+[2022-09-21T22:20:14.519+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: postgres_operator_dag_example.export_pet_to_csv manual__2022-09-21T22:19:53.096618+00:00 [queued]>
+[2022-09-21T22:20:14.525+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: postgres_operator_dag_example.export_pet_to_csv manual__2022-09-21T22:19:53.096618+00:00 [queued]>
+[2022-09-21T22:20:14.526+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-21T22:20:14.528+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 2
+[2022-09-21T22:20:14.529+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-21T22:20:14.537+0000] {taskinstance.py:1389} INFO - Executing <Task(PythonOperator): export_pet_to_csv> on 2022-09-21 22:19:53.096618+00:00
+[2022-09-21T22:20:14.542+0000] {standard_task_runner.py:52} INFO - Started process 62992 to run task
+[2022-09-21T22:20:14.545+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'postgres_operator_dag_example', 'export_pet_to_csv', 'manual__2022-09-21T22:19:53.096618+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/postgresql_demo.py', '--cfg-path', '/tmp/tmpvfvjztoh', '--error-file', '/tmp/tmpb3nup4sf']
+[2022-09-21T22:20:14.546+0000] {standard_task_runner.py:80} INFO - Job 15: Subtask export_pet_to_csv
+[2022-09-21T22:20:14.601+0000] {task_command.py:371} INFO - Running <TaskInstance: postgres_operator_dag_example.export_pet_to_csv manual__2022-09-21T22:19:53.096618+00:00 [running]> on host 49fa11dd9034
+[2022-09-21T22:20:14.655+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=jsanchez
+AIRFLOW_CTX_DAG_ID=postgres_operator_dag_example
+AIRFLOW_CTX_TASK_ID=export_pet_to_csv
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-21T22:19:53.096618+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-21T22:19:53.096618+00:00
+[2022-09-21T22:20:14.672+0000] {base.py:68} INFO - Using connection ID 'qa_ai_external_db' for task execution.
+[2022-09-21T22:20:14.966+0000] {taskinstance.py:1902} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/postgresql_demo.py", line 17, in export_to_csv
+    with NamedTemporaryFile(suffix=".csv") as temp_file:
+NameError: name 'NamedTemporaryFile' is not defined
+[2022-09-21T22:20:14.979+0000] {taskinstance.py:1412} INFO - Marking task as UP_FOR_RETRY. dag_id=postgres_operator_dag_example, task_id=export_pet_to_csv, execution_date=20220921T221953, start_date=20220921T222014, end_date=20220921T222014
+[2022-09-21T22:20:14.986+0000] {standard_task_runner.py:97} ERROR - Failed to execute job 15 for task export_pet_to_csv (name 'NamedTemporaryFile' is not defined; 62992)
+[2022-09-21T22:20:15.011+0000] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-09-21T22:20:15.104+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check
