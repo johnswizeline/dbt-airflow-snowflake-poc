@@ -1,0 +1,29 @@
+[2022-09-28T21:39:14.879+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: preparing_motor_data_for_processing.call_ssh_task manual__2022-09-28T21:39:13.964162+00:00 [queued]>
+[2022-09-28T21:39:14.887+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: preparing_motor_data_for_processing.call_ssh_task manual__2022-09-28T21:39:13.964162+00:00 [queued]>
+[2022-09-28T21:39:14.888+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-28T21:39:14.889+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 2
+[2022-09-28T21:39:14.890+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-28T21:39:14.898+0000] {taskinstance.py:1389} INFO - Executing <Task(SSHOperator): call_ssh_task> on 2022-09-28 21:39:13.964162+00:00
+[2022-09-28T21:39:14.903+0000] {standard_task_runner.py:52} INFO - Started process 5095 to run task
+[2022-09-28T21:39:14.906+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'preparing_motor_data_for_processing', 'call_ssh_task', 'manual__2022-09-28T21:39:13.964162+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/preparing_motor_data_for_processing.py', '--cfg-path', '/tmp/tmpbwx12je2', '--error-file', '/tmp/tmpowzzcido']
+[2022-09-28T21:39:14.907+0000] {standard_task_runner.py:80} INFO - Job 44: Subtask call_ssh_task
+[2022-09-28T21:39:14.951+0000] {task_command.py:371} INFO - Running <TaskInstance: preparing_motor_data_for_processing.call_ssh_task manual__2022-09-28T21:39:13.964162+00:00 [running]> on host 3431a65fe7cb
+[2022-09-28T21:39:15.004+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=jsanchez
+AIRFLOW_CTX_DAG_ID=preparing_motor_data_for_processing
+AIRFLOW_CTX_TASK_ID=call_ssh_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-28T21:39:13.964162+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-28T21:39:13.964162+00:00
+[2022-09-28T21:39:15.006+0000] {ssh.py:136} INFO - Creating ssh_client
+[2022-09-28T21:39:15.007+0000] {ssh.py:114} INFO - ssh_hook is not provided or invalid. Trying ssh_conn_id to create SSHHook.
+[2022-09-28T21:39:15.016+0000] {base.py:68} INFO - Using connection ID 'qa_ai_app1' for task execution.
+[2022-09-28T21:39:15.021+0000] {ssh.py:287} WARNING - No Host Key Verification. This won't protect against Man-In-The-Middle attacks
+[2022-09-28T21:39:15.418+0000] {transport.py:1874} INFO - Connected (version 2.0, client OpenSSH_7.6p1)
+[2022-09-28T21:39:15.831+0000] {transport.py:1874} INFO - Authentication (publickey) successful!
+[2022-09-28T21:39:15.832+0000] {ssh.py:464} INFO - Running command: touch file_name
+[2022-09-28T21:39:16.637+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=preparing_motor_data_for_processing, task_id=call_ssh_task, execution_date=20220928T213913, start_date=20220928T213914, end_date=20220928T213916
+[2022-09-28T21:39:16.662+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-28T21:39:16.699+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

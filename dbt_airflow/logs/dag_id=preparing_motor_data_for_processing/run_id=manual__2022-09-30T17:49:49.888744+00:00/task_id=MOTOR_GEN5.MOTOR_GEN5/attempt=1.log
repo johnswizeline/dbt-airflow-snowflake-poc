@@ -1,0 +1,29 @@
+[2022-09-30T17:50:01.656+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: preparing_motor_data_for_processing.MOTOR_GEN5.MOTOR_GEN5 manual__2022-09-30T17:49:49.888744+00:00 [queued]>
+[2022-09-30T17:50:01.702+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: preparing_motor_data_for_processing.MOTOR_GEN5.MOTOR_GEN5 manual__2022-09-30T17:49:49.888744+00:00 [queued]>
+[2022-09-30T17:50:01.756+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-30T17:50:01.760+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 2
+[2022-09-30T17:50:01.761+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-30T17:50:01.902+0000] {taskinstance.py:1389} INFO - Executing <Task(SSHOperator): MOTOR_GEN5.MOTOR_GEN5> on 2022-09-30 17:49:49.888744+00:00
+[2022-09-30T17:50:02.628+0000] {standard_task_runner.py:52} INFO - Started process 75338 to run task
+[2022-09-30T17:50:02.734+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'preparing_motor_data_for_processing', 'MOTOR_GEN5.MOTOR_GEN5', 'manual__2022-09-30T17:49:49.888744+00:00', '--job-id', '49', '--raw', '--subdir', 'DAGS_FOLDER/preparing_motor_data_for_processing.py', '--cfg-path', '/tmp/tmp4gpt3yci', '--error-file', '/tmp/tmpt_w8vj4f']
+[2022-09-30T17:50:02.748+0000] {standard_task_runner.py:80} INFO - Job 49: Subtask MOTOR_GEN5.MOTOR_GEN5
+[2022-09-30T17:50:04.199+0000] {task_command.py:371} INFO - Running <TaskInstance: preparing_motor_data_for_processing.MOTOR_GEN5.MOTOR_GEN5 manual__2022-09-30T17:49:49.888744+00:00 [running]> on host 3431a65fe7cb
+[2022-09-30T17:50:05.585+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=jsanchez
+AIRFLOW_CTX_DAG_ID=preparing_motor_data_for_processing
+AIRFLOW_CTX_TASK_ID=MOTOR_GEN5.MOTOR_GEN5
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-30T17:49:49.888744+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-30T17:49:49.888744+00:00
+[2022-09-30T17:50:05.620+0000] {ssh.py:136} INFO - Creating ssh_client
+[2022-09-30T17:50:05.634+0000] {ssh.py:114} INFO - ssh_hook is not provided or invalid. Trying ssh_conn_id to create SSHHook.
+[2022-09-30T17:50:05.687+0000] {base.py:68} INFO - Using connection ID 'qa_ai_app1' for task execution.
+[2022-09-30T17:50:06.269+0000] {ssh.py:287} WARNING - No Host Key Verification. This won't protect against Man-In-The-Middle attacks
+[2022-09-30T17:50:06.793+0000] {transport.py:1874} INFO - Connected (version 2.0, client OpenSSH_7.6p1)
+[2022-09-30T17:50:07.635+0000] {transport.py:1874} INFO - Authentication (publickey) successful!
+[2022-09-30T17:50:07.644+0000] {ssh.py:464} INFO - Running command: cd /opt/data/motor/keepsco/ECommerce_Data/GEN5_MechLabor/&& cp $(ls -tr | grep MOTOR_GEN5_20 | tail -n 1) ~/
+[2022-09-30T17:50:09.473+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=preparing_motor_data_for_processing, task_id=MOTOR_GEN5.MOTOR_GEN5, execution_date=20220930T174949, start_date=20220930T175001, end_date=20220930T175009
+[2022-09-30T17:50:09.827+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-30T17:50:10.280+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

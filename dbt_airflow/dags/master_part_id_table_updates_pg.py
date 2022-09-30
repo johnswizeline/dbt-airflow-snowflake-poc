@@ -9,16 +9,16 @@ from airflow.operators.bash import BashOperator
 # from datetime import timedelta
 
 DAG_ID = "master_part_id_table_updates_pg"
-POSTGRES_CONN_ID = "qa_ai_external_db"
+POSTGRES_CONN_ID = "qa_ai_db1_external_db"
 
 default_args = {
     'owner': 'jsanchez',    
     'start_date': datetime.datetime(2022, 9, 22),
     #'end_date': datetime(),
     #'depends_on_past': False,
-    #'email': ['airflow@example.com'],
-    #'email_on_failure': False,
-    #'email_on_retry': False,
+    'email': ['dataplatform@dynatronsoftware.com'],
+    'email_on_failure': True,
+    'email_on_retry': True,
     # If a task fails, retry it once after waiting
     # at least 1 minutes
     'retries': 1,

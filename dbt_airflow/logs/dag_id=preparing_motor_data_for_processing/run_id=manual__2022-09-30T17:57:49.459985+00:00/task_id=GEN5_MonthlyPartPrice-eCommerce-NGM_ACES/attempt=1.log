@@ -1,0 +1,29 @@
+[2022-09-30T17:57:52.670+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: preparing_motor_data_for_processing.GEN5_MonthlyPartPrice-eCommerce-NGM_ACES manual__2022-09-30T17:57:49.459985+00:00 [queued]>
+[2022-09-30T17:57:52.678+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: preparing_motor_data_for_processing.GEN5_MonthlyPartPrice-eCommerce-NGM_ACES manual__2022-09-30T17:57:49.459985+00:00 [queued]>
+[2022-09-30T17:57:52.680+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-30T17:57:52.681+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 2
+[2022-09-30T17:57:52.683+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2022-09-30T17:57:52.697+0000] {taskinstance.py:1389} INFO - Executing <Task(SSHOperator): GEN5_MonthlyPartPrice-eCommerce-NGM_ACES> on 2022-09-30 17:57:49.459985+00:00
+[2022-09-30T17:57:52.713+0000] {standard_task_runner.py:52} INFO - Started process 75728 to run task
+[2022-09-30T17:57:52.725+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'preparing_motor_data_for_processing', 'GEN5_MonthlyPartPrice-eCommerce-NGM_ACES', 'manual__2022-09-30T17:57:49.459985+00:00', '--job-id', '58', '--raw', '--subdir', 'DAGS_FOLDER/preparing_motor_data_for_processing.py', '--cfg-path', '/tmp/tmp687mmtn5', '--error-file', '/tmp/tmpq6zodqal']
+[2022-09-30T17:57:52.727+0000] {standard_task_runner.py:80} INFO - Job 58: Subtask GEN5_MonthlyPartPrice-eCommerce-NGM_ACES
+[2022-09-30T17:57:52.925+0000] {task_command.py:371} INFO - Running <TaskInstance: preparing_motor_data_for_processing.GEN5_MonthlyPartPrice-eCommerce-NGM_ACES manual__2022-09-30T17:57:49.459985+00:00 [running]> on host 3431a65fe7cb
+[2022-09-30T17:57:53.107+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=jsanchez
+AIRFLOW_CTX_DAG_ID=preparing_motor_data_for_processing
+AIRFLOW_CTX_TASK_ID=GEN5_MonthlyPartPrice-eCommerce-NGM_ACES
+AIRFLOW_CTX_EXECUTION_DATE=2022-09-30T17:57:49.459985+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-09-30T17:57:49.459985+00:00
+[2022-09-30T17:57:53.112+0000] {ssh.py:136} INFO - Creating ssh_client
+[2022-09-30T17:57:53.114+0000] {ssh.py:114} INFO - ssh_hook is not provided or invalid. Trying ssh_conn_id to create SSHHook.
+[2022-09-30T17:57:53.143+0000] {base.py:68} INFO - Using connection ID 'qa_ai_app1' for task execution.
+[2022-09-30T17:57:53.160+0000] {ssh.py:287} WARNING - No Host Key Verification. This won't protect against Man-In-The-Middle attacks
+[2022-09-30T17:57:53.369+0000] {transport.py:1874} INFO - Connected (version 2.0, client OpenSSH_7.6p1)
+[2022-09-30T17:57:53.797+0000] {transport.py:1874} INFO - Authentication (publickey) successful!
+[2022-09-30T17:57:53.799+0000] {ssh.py:464} INFO - Running command: cd /opt/data/motor/keepsco/&& cp $(ls -tr | grep GEN5_MonthlyPartPrice-eCommerce-NGM_ACES_ | tail -n 1) ~/
+[2022-09-30T17:57:55.471+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=preparing_motor_data_for_processing, task_id=GEN5_MonthlyPartPrice-eCommerce-NGM_ACES, execution_date=20220930T175749, start_date=20220930T175752, end_date=20220930T175755
+[2022-09-30T17:57:56.404+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-09-30T17:57:56.715+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check
