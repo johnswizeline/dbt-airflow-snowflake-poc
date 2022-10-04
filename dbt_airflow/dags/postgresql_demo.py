@@ -9,7 +9,7 @@ from airflow.operators.python import PythonOperator
 from datetime import timedelta
 
 DAG_ID = "postgres_operator_dag_example"
-POSTGRES_CONN_ID = "qa_ai_external_db"
+POSTGRES_CONN_ID = "qa_ai_db1_external_db"
 
 def export_to_csv(copy_sql, file_name):
     pg_hook = PostgresHook.get_hook(POSTGRES_CONN_ID)
@@ -19,7 +19,7 @@ def export_to_csv(copy_sql, file_name):
 
 
 default_args = {
-    'owner': 'jsanchez',    
+    'owner': 'airflow',    
     'start_date': datetime.datetime(2022, 9, 21),
     #'end_date': datetime(),
     #'depends_on_past': False,

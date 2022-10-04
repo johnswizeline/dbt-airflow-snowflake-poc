@@ -12,7 +12,7 @@ DAG_ID = "master_part_id_table_updates_pg"
 POSTGRES_CONN_ID = "qa_ai_db1_external_db"
 
 default_args = {
-    'owner': 'jsanchez',    
+    'owner': 'airflow',    
     'start_date': datetime.datetime(2022, 9, 22),
     #'end_date': datetime(),
     #'depends_on_past': False,
