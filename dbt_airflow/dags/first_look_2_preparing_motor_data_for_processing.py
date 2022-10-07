@@ -8,7 +8,7 @@ from airflow.providers.ssh.operators.ssh import SSHOperator
 
 from datetime import timedelta
 
-DAG_ID = "preparing_motor_data_for_processing"
+DAG_ID = "first_look_2_preparing_motor_data_for_processing"
 SSH_CONN_ID = "qa_ai_app1"
 SOURCES_VAR_NAME = "sources_motor_data"
 FOLDER_REPORT = "Q3_2022" 

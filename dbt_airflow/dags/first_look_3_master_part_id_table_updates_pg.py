@@ -8,7 +8,7 @@ from airflow.operators.dummy import DummyOperator
 from airflow.operators.bash import BashOperator
 # from datetime import timedelta
 
-DAG_ID = "master_part_id_table_updates_pg"
+DAG_ID = "first_look_3_master_part_id_table_updates_pg"
 POSTGRES_CONN_ID = "qa_ai_db1_external_db"
 
 default_args = {

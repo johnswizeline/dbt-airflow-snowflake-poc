@@ -41,7 +41,7 @@ with DAG(
     create_airflow_demo_schema = PostgresOperator(
         task_id="create_airflow_demo_schema",
         postgres_conn_id=POSTGRES_CONN_ID,
-        sql="CREATE SCHEMA IF NOT EXISTS airflow_demo AUTHORIZATION jsanchez;",
+        sql="CREATE SCHEMA IF NOT EXISTS airflow_demo AUTHORIZATION dataplatform;",
     )
     create_pet_table = PostgresOperator(
         task_id="create_pet_table",
