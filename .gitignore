@@ -1,1 +1,14 @@
-/dbt_airflow/logs
+/dbt_airflow/logs/*
+/dbt_airflow/logs/
+__pycache__/*
+.*.sw?
+*.pyc
+/python.log
+*~
+/controller/Log/*
+logs/
+/config/env_config/
+.vscode
+.DS_Store
+venv
+.idea/
